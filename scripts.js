@@ -72,8 +72,15 @@ function Column(name) {
       this.$element.remove();
     }
 };
-  
-	function createCard() {
+
+function Card(description) {
+	var self = this;
+
+    this.id = randomString();
+    this.description = description;
+    this.$element = createCard();
+
+    function createCard() {
 		// CREATING THE BLOCKS
 		var $card = $('<li>').addClass('card');
 		var $cardDescription = $('<p>').addClass('card-description').text(self.description);
@@ -90,7 +97,7 @@ function Column(name) {
 
 			return $card;
 	}
-
+}	
   
 Card.prototype = {
 	removeCard: function() {
