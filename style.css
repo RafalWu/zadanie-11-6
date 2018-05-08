@@ -1,10 +1,63 @@
-body {
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.board {
+	text-align: center;
+}
+.card {
+	min-height: 100px;
+	position: relative;
+	list-style-type: none;
+	background-color: #b5b5b5;
+	border-radius: 10%;
+}
+.board > h1 {
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.board button {
+	margin: 20px 0;
+}
+
+button, li :hover {
+	cursor: pointer;
+}
+.column-container {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	
+}
+
+.column {
+	position: relative;
 	background-color: #eaeaea;
-	background-size: 100%;
-	margin: 30px 30px;
+	width: 30%;
+	height: 300px;
+	border-radius: 10%;
+	height: auto;
+	padding: 15px;
+	margin: 0 10px 10px 5px;
+	border: dotted;
+}
+
+.btn-delete {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
 }
 
 
-button {
-	cursor: pointer;
+.column-card-list > p {
+	height: 100px;
+	border: dashed;
+	
 }
